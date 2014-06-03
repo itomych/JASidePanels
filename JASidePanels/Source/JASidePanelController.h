@@ -25,6 +25,10 @@
 
 #import <UIKit/UIKit.h>
 
+#define kJASidePanelControllerWillOpenLeftPanelNotification @"JASidePanelControllerWillOpenLeftPanelNotification"
+#define kJASidePanelControllerWillOpenRightPanelNotification @"JASidePanelControllerWillOpenRightPanelNotification"
+#define kJASidePanelControllerWillOpenCenterPanelNotification @"JASidePanelControllerWillOpenCenterPanelNotification"
+
 typedef enum _JASidePanelStyle {
     JASidePanelSingleActive = 0,
     JASidePanelMultipleActive
