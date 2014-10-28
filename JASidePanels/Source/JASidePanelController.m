@@ -455,6 +455,13 @@ static char ja_kvoContext;
     } else if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
         UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)gestureRecognizer;
         CGPoint translate = [pan translationInView:self.centerPanelContainer];
+        
+        CGPoint locationInView = [pan locationInView:self.centerPanelContainer];
+        
+        if (locationInView.x > self.panTouchAreaWidth && translate.x > 0) {
+            return NO;
+        }
+
         // determine if right swipe is allowed
         if (translate.x < 0 && ! self.allowRightSwipe) {
             return NO;

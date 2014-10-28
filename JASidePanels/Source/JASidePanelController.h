@@ -89,6 +89,9 @@ typedef enum _JASidePanelState {
 // size the right panel based on this fixed size. overrides rightGapPercentage
 @property (nonatomic) CGFloat rightFixedWidth;
 
+// width of pan gesture for center panel
+@property (nonatomic) CGFloat panTouchAreaWidth;
+
 // the visible width of the right panel
 @property (nonatomic, readonly) CGFloat rightVisibleWidth;
 
